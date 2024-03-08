@@ -1,72 +1,37 @@
-<style>
-    *{
-        margin : 0 ;
-        padding : 0 ;
-    }
-    body {
-        background : linear-gradient(black, purple);
-        height : 100vh ;
-        font-family : system-ui ;
-    }
-    a{
-        text-decoration : none ;
-        color : #fff ;
-    }
-    header {
-        display : flex ;
-        justify-content : space-between ;
-        align-items : center ;
-        margin : 30px ;
-    }
-    header.logo {
-        font-size : 30px ;
-       /* text-transform: uppercase */
-    }
-    header ul {
-        display : flex ;
-        justify-content : center ;
-        align : center ;
-        list-style : none ;
-    }
-    header ul li {
-        margin : 30px ;
-    }
-    header ul li a {
-        padding : 6px 15px ;
-        border-radius : 20px ;
-    }
-    header ul li a:hover {
-        background : #fff ;
-        color : #200016 ;
-    }
-    .x {
-        color : #fff ;
-        text-align: center;
-        margin : 5% ;
-    }
-    .y {
-        color : #fff ;
-        text-align: left;
-        margin : 5% ;
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Web Software Developers, Key Features, Data Visualization, IT solutions, IT solutions, Web Analytics, We are directly involved in t​he process, Get in Touch!, INTUITIVE">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/nicepage.css'%}" media="screen">
+<link rel="stylesheet" href="{% static 'css/Home.css'%}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js'%}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js'%}" defer=""></script>
+    <meta name="generator" content="Nicepage 6.5.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     
     
-    }
-    #img1 {
-        height : 30px ;
-        width : 30px ;
-    }
-    .p {
-        height : 50px ;
-        border-width : 5px ;
-        border-color : #000000 ;
-        border-style :solid ;
-        text-align: center;
-    }
-    button {
-        width : 50px ;
-    }
-
-</style>
-
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "{% static 'images/Screenshot2024-03-07193020.png'%}"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+{% include 'pages/includes/header.html'%}
 {% block content %}
 {% endblock content %}
+{% include 'pages/includes/footer.html'%}
+</body>
+</html>

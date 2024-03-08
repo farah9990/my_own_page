@@ -1,42 +1,109 @@
+{% extends 'base.html'%}
+{% load static %}
 
-{% extends 'base.html' %}
 {% block content %}
 
-<!DOCTYPE html>
-
-<html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <title>My Webpage</title>
-    </head>
-    <body>
-       
-      <div class = "x">
-        <hr/>
-        <h3> welcome in my page !!</h3>
-        <p>i'm {{name}} and i would like to share with you a brief about me .</p>
-        <br/>
-        <br/>
-      </div>
-
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://images1.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">do you like computer science ?</h5>
-              <p class="card-text">so sail with me in the world of programming.</p>
-              <p class="card-text"><small class="text-muted">deadly time ..</small></p>
+    <section class="u-align-left u-clearfix u-image u-section-1" id="carousel_0746" data-image-width="1980" data-image-height="1350">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-27 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h1 class="u-custom-font u-text u-text-body-alt-color u-text-1">Software Developer</h1>
+                  <p class="u-text u-text-body-alt-color u-text-2"> I am Farah Al-Othaim, and here I will review some of my skills,&nbsp; web applications, phone applications, and the courses I have completed. </p>
+                  <a href="About.html" class="u-active-palette-4-base u-btn u-btn-round u-button-style u-custom-font u-font-raleway u-hover-palette-4-base u-palette-1-base u-radius-50 u-text-body-alt-color u-btn-1">read more</a>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-image u-layout-cell u-right-cell u-size-33 u-image-1" data-image-width="1372" data-image-height="1235">
+                <div class="u-container-layout u-valign-bottom u-container-layout-2"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-
-    </body>
-</html>
+    </section>
+    <section class="u-align-center u-clearfix u-white u-section-2" id="carousel_f35e">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <h1 class="u-align-center u-text u-text-1">Key Features</h1>
+        <img alt="" class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-contain u-image-default u-image-1" src="{% static 'images/Untitled-1-min.jpg'%}" data-image-width="1575" data-image-height="977">
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-custom-color-1 u-custom-item u-list-item u-repeater-item u-list-item-1" data-href="Courses.html">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1"><span class="u-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2db4"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-2db4"><g><path d="m497 26h-482c-8.284 0-15 6.716-15 15v340c0 8.284 6.716 15 15 15h181v60h-15c-8.284 0-15 6.716-15 15s6.716 15 15 15h150c8.284 0 15-6.716 15-15s-6.716-15-15-15h-15v-60h181c8.284 0 15-6.716 15-15v-340c0-8.284-6.716-15-15-15zm-15 30v240h-452v-240zm-196 400h-60v-60h60zm-256-90v-40h452v40z"></path><path d="m223.381 258.012c1.818.724 3.694 1.066 5.539 1.066 5.964 0 11.604-3.581 13.942-9.46l54.15-136.147c3.062-7.697-.697-16.42-8.395-19.481-7.698-3.063-16.42.697-19.481 8.395l-54.15 136.148c-3.061 7.696.698 16.417 8.395 19.479z"></path><path d="m335.557 250.526c2.367 1.372 4.953 2.023 7.504 2.023 5.177 0 10.213-2.683 12.994-7.484l36.363-62.777c2.741-4.732 2.69-10.58-.133-15.263l-36.363-60.315c-4.277-7.095-13.495-9.378-20.591-5.102-7.095 4.277-9.379 13.496-5.102 20.591l31.786 52.724-31.919 55.106c-4.153 7.167-1.708 16.345 5.461 20.497z"></path><path d="m155.945 245.065c2.782 4.802 7.817 7.484 12.994 7.484 2.551 0 5.138-.651 7.504-2.023 7.168-4.152 9.613-13.33 5.461-20.498l-31.919-55.106 31.786-52.724c4.277-7.095 1.993-16.313-5.102-20.591-7.096-4.278-16.314-1.993-20.591 5.102l-36.363 60.315c-2.823 4.683-2.874 10.531-.133 15.263z"></path>
+</g></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-2">Courses </h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-color-2 u-custom-item u-list-item u-repeater-item u-list-item-2" data-href="Skills.html">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2"><span class="u-icon u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-160c"></use></svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-160c"><path d="m78.9 15.9c2.1 0 3.7 1.7 3.7 3.7v3.7h-37.2v-3.7c0-2 1.7-3.7 3.7-3.7h29.8m39.7 14.8-11.6 34.5c-0.5 1.5-1.9 2.5-3.5 2.5h-20.9v-3.7c0-2-1.7-3.7-3.7-3.7h-29.8c-2.1 0-3.7 1.7-3.7 3.7v3.7h-20.9c-1.6 0-3-1-3.5-2.5l-11.6-34.5h109.2m1.5 19.1v58.6c0 2-1.7 3.7-3.7 3.7h-104.7c-2.1 0-3.7-1.7-3.7-3.7v-58.6l5.9 17.7c1.5 4.5 5.8 7.6 10.6 7.6h20.9v3.7c0 2 1.7 3.7 3.7 3.7h29.8c2.1 0 3.7-1.7 3.7-3.7v-3.7h20.9c4.8 0 9.1-3 10.6-7.6l6-17.7m-44.9 17.9v7.4h-22.4v-7.4h22.4m15.3-44.9v-3.2c0-6.4-5.2-11.6-11.6-11.6h-29.8c-6.4 0-11.7 5.2-11.7 11.6v3.2h-29.5c-4.4 0-7.9 3.5-7.9 7.9v77.7c0 6.4 5.2 11.6 11.7 11.6h104.7c6.4 0 11.7-5.2 11.7-11.6v-77.7c0-4.4-3.6-7.9-7.9-7.9h-29.7z"></path></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-3">Top Skills</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-color-3 u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-href="Phone-application​s.html">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3"><span class="u-icon u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0f4f"></use></svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-0f4f"><path d="m117.4 76c1.5 0 2.7 1.2 2.7 2.7v38.7c0 1.5-1.2 2.7-2.7 2.7h-38.7c-1.5 0-2.7-1.2-2.7-2.7v-38.7c0-1.5 1.2-2.7 2.7-2.7h38.7m0-7.9h-38.7c-5.8 0-10.6 4.8-10.6 10.6v38.7c0 5.8 4.8 10.6 10.6 10.6h38.7c5.8 0 10.6-4.8 10.6-10.6v-38.7c0-5.8-4.8-10.6-10.6-10.6z"></path><path d="m49.3 7.9c1.5 0 2.7 1.2 2.7 2.7v38.7c0 1.5-1.2 2.7-2.7 2.7h-38.7c-1.5 0-2.7-1.2-2.7-2.7v-38.7c0-1.5 1.2-2.7 2.7-2.7h38.7m0-7.9h-38.7c-5.8 0-10.6 4.8-10.6 10.6v38.7c0 5.8 4.8 10.6 10.6 10.6h38.7c5.8 0 10.6-4.8 10.6-10.6v-38.7c0-5.8-4.8-10.6-10.6-10.6z"></path><path d="m90 7.9c0.7 0 1.4 0.3 1.9 0.8l27.4 27.4c1 1 1 2.7 0 3.8l-27.4 27.3c-0.5 0.5-1.2 0.8-1.9 0.8s-1.4-0.3-1.9-0.8l-27.3-27.3c-1-1-1-2.7 0-3.8l27.3-27.4c0.6-0.5 1.3-0.8 1.9-0.8m0-7.9c-2.8 0-5.5 1.1-7.5 3.1l-27.3 27.4c-2 2-3.1 4.7-3.1 7.5s1.1 5.5 3.1 7.5l27.4 27.4c2 2 4.7 3.1 7.5 3.1s5.5-1.1 7.5-3.1l27.4-27.4c2-2 3.1-4.7 3.1-7.5s-1.1-5.5-3.1-7.5l-27.5-27.4c-2-2-4.6-3.1-7.5-3.1z"></path><path d="m49.3 76c1.5 0 2.7 1.2 2.7 2.7v38.7c0 1.5-1.2 2.7-2.7 2.7h-38.7c-1.5 0-2.7-1.2-2.7-2.7v-38.7c0-1.5 1.2-2.7 2.7-2.7h38.7m0-7.9h-38.7c-5.8 0-10.6 4.8-10.6 10.6v38.7c0 5.8 4.8 10.6 10.6 10.6h38.7c5.8 0 10.6-4.8 10.6-10.6v-38.7c0-5.8-4.8-10.6-10.6-10.6z"></path></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-4"> Phone Applications</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-palette-2-light-1 u-repeater-item u-shape-rectangle u-list-item-4">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-4"><span class="u-icon u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f849"></use></svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-f849"><path d="m26.4 108.7c-1.2 0-2.2-1-2.2-2.2s1-2.2 4.7-2.2h48.7v-7.4h-31.2v-9.9h31.2v-8.4h-58.7c-7.7 0-10.6-3-10.6-6.6v-57.1c0-3.7 3-6.6 6.6-6.6h81.2c3.7 0 6.6 3 6.6 6.6v27h8.3v-27c0-8.2-6.7-14.9-14.9-14.9h-81.2c-8.2 0-14.9 6.7-14.9 14.9v57.1c0 8.2 6.7 14.9 14.9 14.9h23.2v10.1h-13.8c-4.3 0-8.5 3.7-8.5 9.5v0.2c0 4.6 3.7 9.3 8.3 9.3h53.5v-7.3h-51.2z"></path><path d="m118 41.9h-30c-5.8 0-10.5 4.7-10.5 10.6 0 0 0.1 66.3 0.1 66.4 0 4.3 5.1 9 10.4 9h30c5.6 0 10.2-4.4 10.5-10.1v-65.3c0-5.9-4.7-10.6-10.5-10.6zm2.4 75.5c-0.1 1.3-1.1 2.3-2.4 2.3h-30c-1 0-1.9-0.7-2.2-1.6l-0.2-65.6c0-1.3 1.1-2.4 2.4-2.4h30c1.3 0 2.4 1.1 2.4 2.4v64.9z"></path></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-5">Web Applications </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-2-base u-section-3" id="carousel_3946">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-1">Get in Touch!<br>
+        </h1>
+        <p class="u-text u-text-2"> We are here to communicate to achieve success and exchange technical knowledge</p>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-60">
+                <div class="u-layout-row">
+                  <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-white u-layout-cell-1">
+                    <div class="u-container-layout u-valign-top u-container-layout-1"><span class="u-border-3 u-border-grey-15 u-file-icon u-icon u-icon-circle u-icon-1"><img src="{% static 'images/Screenshot2024-03-07200055.png'%}" alt=""></span>
+                      <h5 class="u-text u-text-grey-40 u-text-3">githup:</h5>
+                      <p class="u-text u-text-4">
+                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1" data-href="https://github.com/farah9990?tab=repositories" data-target="_blank" href="https://github.com/farah9990?tab=repositories" target="_blank">@farah9990 </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-white u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2"><span class="u-border-3 u-border-grey-15 u-icon u-icon-circle u-text-grey-40 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 479.058 479.058" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-fddd"></use></svg><svg class="u-svg-content" viewBox="0 0 479.058 479.058" id="svg-fddd"><path d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"></path></svg></span>
+                      <h5 class="u-align-center u-text u-text-grey-40 u-text-5">Email:</h5>
+                      <a href="mailto:411201940@qu.edu.sa?subject=contact" class="u-border-active-none u-border-hover-none u-btn u-btn-rectangle u-button-style u-none u-text-body-color u-text-hover-palette-2-base u-btn-2" target="_blank">411201940@qu.edu.sa </a>
+                    </div>
+                  </div>
+                  <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-white u-layout-cell-3">
+                    <div class="u-container-layout u-valign-top u-container-layout-3"><span class="u-border-3 u-border-grey-15 u-icon u-icon-circle u-text-grey-40 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 384 384" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6a5c"></use></svg><svg class="u-svg-content" viewBox="0 0 384 384" x="0px" y="0px" id="svg-6a5c" style="enable-background:new 0 0 384 384;"><g><g><path d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.906-3.719-23.323-0.833-30.438,6.417l-43.177,32.594    c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448    c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.812C13.823,0,0,13.823,0,30.812    C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z     M362.667,353.188c0,5.229-4.25,9.479-9.479,9.479c-182.99,0-331.854-148.865-331.854-331.854c0-5.229,4.25-9.479,9.479-9.479    h70.521c5.229,0,9.479,4.25,9.479,9.479c0,25.802,4.052,51.125,11.979,75.115c1.104,3.542,0.208,7.208-3.375,10.938L82.75,165.427    c-2.458,3.26-2.844,7.625-1,11.26c29.927,58.823,66.292,95.188,125.531,125.542c3.604,1.885,8.021,1.49,11.292-0.979    l49.677-37.635c2.51-2.51,6.271-3.406,9.667-2.25c24.156,7.979,49.479,12.021,75.271,12.021c5.229,0,9.479,4.25,9.479,9.479    V353.188z"></path>
+</g>
+</g></svg></span>
+                      <h5 class="u-text u-text-grey-40 u-text-6">Call me:</h5>
+                      <p class="u-text u-text-7">0000000000 </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 {% endblock content %}
