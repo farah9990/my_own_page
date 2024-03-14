@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Web Software Developers, Key Features, Data Visualization, IT solutions, IT solutions, Web Analytics, We are directly involved in t​he process, Get in Touch!, INTUITIVE">
     <meta name="description" content="">
-    <title>Home</title>
+    <title>{{name}}</title>
     <link rel="stylesheet" href="{% static 'css/nicepage.css'%}" media="screen">
-<link rel="stylesheet" href="{% static 'css/Home.css'%}" media="screen">
+<link rel="stylesheet" href="{% static 'css/'|add:name|add:'.css'%}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js'%}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js'%}" defer=""></script>
     <meta name="generator" content="Nicepage 6.5.3, nicepage.com">
@@ -25,7 +25,7 @@
 		"logo": "{% static 'images/Screenshot2024-03-07193020.png'%}"
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Home">
+    <meta property="og:title" content="{{name}}">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
