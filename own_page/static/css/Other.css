@@ -1,0 +1,28 @@
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #250c3b;
+  }
+  .container {
+    margin-top: 50px;
+  }
+  textarea {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff4d00;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  section {
+    background-color: #250c3b;
+  }

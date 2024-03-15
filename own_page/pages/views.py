@@ -25,3 +25,7 @@ def WepApplications(request):
 
 def PhoneApplications(request):
     return render(request, 'pages/PhoneApplication.html', {'name':'Phone-applications'})
+
+def Other(request):
+    return render(request, 'pages/Other.html', {'name':'Other'})
+

@@ -1,0 +1,105 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+<section class="D" >
+<div>
+    <br><br>
+    <h1> Welcome in web technologies course</h1>
+    <hr>
+    <h3>Here I am just training and adding what is required in the web technologies course</h3>
+</div>
+<div>
+    <img src="https://cdn.eternalorganizer.com/wp-content/uploads/2017/09/04204513/Web-1.jpg" />
+</div>
+
+</section >
+<section class="B"> <!--In the future I will add an action-->
+    <br><br><br><br>
+  <div class="container">
+    <h1>farah search</h1>
+    <form id="searchForm" action="https://www.google.com/search" method="GET" target="_blank">
+      <input id="textInput" name="q" placeholder="Enter your search query...">
+      <button class="T" type="button" id="speechButton">Speak</button>
+      <br>
+      <button class="S" type="submit">Search </button>
+      <br>
+      <p>In the future I will add an action with model (database)</p>
+    </form>
+    
+  </div>
+
+  <script>
+    const speechButton = document.getElementById('speechButton');
+    const textInput = document.getElementById('textInput');
+
+    // Check if browser supports SpeechRecognition
+    if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+
+      speechButton.addEventListener('click', () => {
+        recognition.start();
+      });
+
+      recognition.addEventListener('result', (event) => {
+        const transcript = Array.from(event.results)
+          .map(result => result[0].transcript)
+          .join('');
+
+        textInput.value = transcript;
+      });
+
+      recognition.addEventListener('end', () => {
+        recognition.stop();
+      });
+
+      recognition.addEventListener('error', (event) => {
+        console.error('Speech recognition error:', event.error);
+      });
+    } else {
+      speechButton.disabled = true;
+      speechButton.textContent = 'Speech recognition not supported';
+    }
+  </script>
+<br><br><br><br>
+</section>  
+<section> 
+    <br>
+    <h3><b>history</b></h3>
+    <p>I will develop it when we get the database (model)</p>
+    <div class="center">
+    <ul>
+        <li>Save what the user searches for and  his time</li>
+        <li>Reload the page</li>
+        <li>Insert it into the table</li>
+      </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">search</th>
+            <th scope="col">time</th>
+    
+          </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Search1 .... </td>
+                <td>date1 ...</td>
+            </tr>
+            <tr>
+                <td>Search1 .... </td>
+                <td>date1 ...</td>
+            </tr>
+        </tbody>
+    
+      </table>
+      <br><br><br>
+</section>
+{% endblock content %}

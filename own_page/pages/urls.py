@@ -11,5 +11,5 @@ urlpatterns = [
     path('WepApplication.html', views.WepApplications, name='Wep-applications'),
     path('Skills.html', views.Skills, name='Skills'),
     path('PhoneApplication.html', views.PhoneApplications, name='Phone-applications'),
-
+    path('Other.html', views.Other, name='Other'),
 ]
