@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import History
+from datetime import datetime
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -27,5 +29,14 @@ def PhoneApplications(request):
     return render(request, 'pages/PhoneApplication.html', {'name':'Phone-applications'})
 
 def Other(request):
-    return render(request, 'pages/Other.html', {'name':'Other'})
+    if request.method == 'POST':
+        query = request.POST.get('q', '')
+        
+        if query:
+            History.objects.create(Search=query, Date=datetime.now())
+
+            # Redirect to Google for search
+            return redirect(f'https://www.google.com/search?q={query}')
+
+    return render(request, 'pages/Other.html', {'name': 'Other', 'History': History.objects.all()})
 
