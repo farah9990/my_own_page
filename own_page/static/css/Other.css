@@ -6,23 +6,74 @@
   .container {
     margin-top: 50px;
   }
-  textarea {
-    width: 80%;
-    height: 100px;
+  input {
+    width: 20%;
+    height: 70px;
     margin-bottom: 20px;
+    border-radius: 12px;
+    color: black;
+    
+  }
+  .S {
+    width: 450px;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+  .T {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    
   }
   button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    
     background-color: #ff4d00;
     color: #fff;
-    border: none;
-    border-radius: 50%;
+    
   }
   button:hover {
-    background-color: #0056b3;
+    background-color: #980303;
   }
   section {
-    background-color: #250c3b;
+    background-color: #fff;
+    color: black;
   }
+  .B {
+    background-color: #250c3b;
+    color: #fff;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    width: 95%;
+    align-items: center;
+    border-radius: 12px;
+  }
+  th {
+    background-color: #980303;
+    color: white;
+  }
+
+  tr:hover {background-color: coral;}
+
+  .center {
+    margin: auto;
+    width: 40%;
+    border: 3px solid rgb(49, 6, 6);
+    padding: 10px;
+  }
+  .D {
+    background-color: #efc6a8;
+    color: #000000;
+  }
+  .Q {
+    width: 200px;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+  
