@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
-from .models import History
-from datetime import datetime
+from django.db.models import Q, Avg, Min
+from django.db.models.functions import Extract
+from .models import History, Person, Event
+from datetime import datetime , date
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -37,6 +39,49 @@ def Other(request):
 
             # Redirect to Google for search
             return redirect(f'https://www.google.com/search?q={query}')
+    
 
-    return render(request, 'pages/Other.html', {'name': 'Other', 'History': History.objects.all()})
 
+        # Implementing the Functionalities
+
+    # Filter people born after '1975-01-01'
+    people = Person.objects.filter(birth_date__gt='1975-01-01')
+    # Exclude people named 'Jane Doe'
+    people_exclude = people.exclude(name='John Doe')
+
+    # Limit to first 5 people
+    limited_people = people[:2]
+
+    # Combine Q operators using & and |
+    query = Q(name='John Doe') & (Q(birth_date__gt='1975-01-01') | Q(bio__icontains='engineer'))
+    people_filtered = Person.objects.filter(query)
+
+    # Order people by birth date in descending order
+    ordered_people = Person.objects.order_by('-birth_date')
+
+    # Count of people born after '1975-01-01'
+    count_people = Person.objects.filter(birth_date__gt='1975-01-01').count()
+
+
+    # Calculate age and annotate it to the queryset
+    people_with_age = Person.objects.all().annotate(
+        age=date.today().year - Extract('birth_date', 'year')
+    )
+
+    # Calculate average age
+    avg_age = people_with_age.aggregate(avg_age=Avg('age'))
+    
+    # Find the minimum event date for each person
+    min_event_dates = Event.objects.values('person__name').annotate(min_date=Min('event_date')).order_by()
+    
+    return render(request, 'pages/Other.html', {
+        'name': 'Other',
+        'limited_people': limited_people,
+        'people_filtered': people_filtered,
+        'people_exclude' : people_exclude,
+        'ordered_people': ordered_people,
+        'count_people': count_people,
+        'avg_age': avg_age['avg_age'] if avg_age['avg_age'] else 0,
+        'min_event_dates': min_event_dates,
+        'History': History.objects.all()
+    })

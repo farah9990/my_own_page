@@ -38,7 +38,6 @@
     <script>
         const speechButton = document.getElementById('speechButton');
         const textInput = document.getElementById('textInput');
-        const History = document.getElementById('History');
 
         // Check if browser supports SpeechRecognition
         if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
@@ -73,6 +72,9 @@
         }
     </script>
     <br><br><br><br>
+
+
+
 </section>
 
 <section>
@@ -111,5 +113,51 @@
     </form>
     <br><br>
 </section>
+<section style="background-color: darkgray; color:aliceblue">
+    <hr>
+       <h1> Implementing the Functionalities </h1>
+
+        <h4>Limited 2 People:</h4>
+        <ul>
+            {% for person in limited_people %}
+                <li>{{ person.name }} - {{ person.birth_date }}</li>
+            {% endfor %}
+        </ul>
+    
+        <h4>People Filtered (name:john doe , bron after 1975 , bio:engineer):</h4>
+        <ul>
+            {% for person in people_filtered %}
+                <li>{{ person.name }} - {{ person.birth_date }}</li>
+            {% endfor %}
+        </ul>
+        <h4>People Bron after 1975  excluded john doe:</h4>
+        <ul>
+            {% for person in people_exclude %}
+                <li>{{ person.name }} - {{ person.birth_date }}</li>
+            {% endfor %}
+        </ul>
+    
+        <h4>Ordered People:</h4>
+        <ul>
+            {% for person in ordered_people %}
+                <li>{{ person.name }} - {{ person.birth_date }}</li>
+            {% endfor %}
+        </ul>
+    
+        <h4>Count of People Born After 1975:</h4>
+        <p>{{ count_people }}</p>
+    
+        <h4>Average Age:</h4>
+        <p>{{ avg_age }}</p>
+
+        <h4>Minimum Event Date for Each Person:</h4>
+        <ul>
+            {% for item in min_event_dates %}
+                <li>{{ item.person__name }} - {{ item.min_date }}</li>
+            {% endfor %}
+        </ul>
+
+</section>
 {% endblock content %}
+
 
