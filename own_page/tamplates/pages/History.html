@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <br>
+    <h3><b>History</b></h3>
+    <div class="center">
+        <ul>
+            <li>Save what the user searches for and his time</li>
+            <li>Reload the page</li>
+            <li>Insert it into the table</li>
+        </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Search</th>
+                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in History %}
+                <tr>
+                    <td><a href="https://www.google.com/search?q={{ item.Search }}">{{ item.Search }}</a></td>
+                    <td>{{ item.Date }}</td>
+                    <td>
+                        <form action="{% url 'delete_history' item.pk %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br><br>
+</section>
+
+{% endblock content %}

@@ -3,6 +3,7 @@ from django.db.models import Q, Avg, Min
 from django.db.models.functions import Extract
 from .models import History, Person, Event
 from datetime import datetime , date
+from django.shortcuts import redirect, get_object_or_404
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -83,5 +84,16 @@ def Other(request):
         'count_people': count_people,
         'avg_age': avg_age['avg_age'] if avg_age['avg_age'] else 0,
         'min_event_dates': min_event_dates,
-        'History': History.objects.all()
+        
     })
+    
+def history_view(request):
+    history_items = History.objects.all()  # Query all History objects
+    return render(request, 'pages/History.html', {'name': 'History', 'History': history_items})
+
+def delete_history(request, pk):
+    history_item = get_object_or_404(History, pk=pk)
+    if request.method == 'POST':
+        history_item.delete()
+        return redirect('history_view')
+    return redirect('history_view')

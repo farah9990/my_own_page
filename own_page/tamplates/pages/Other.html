@@ -71,48 +71,17 @@
             speechButton.textContent = 'Speech recognition not supported';
         }
     </script>
-    <br><br><br><br>
-
-
-
-</section>
-
-<section>
     <br>
-    <h3><b>history</b></h3>
-    <div class="center">
-        <ul>
-            <li>Save what the user searches for and his time</li>
-            <li>Reload the page</li>
-            <li>Insert it into the table</li>
-        </ul>
-    </div>
-    <br>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">search</th>
-                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in History %}
-                <tr>
-                    <td><a href="https://www.google.com/search?q={{ item.Search }}">{{ item.Search }}</a></td>
-                    <td>{{ item.Date }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <a href="History.html" target="_blank">go to history</a>
+
     <br><br><br>
+
     
 </section>
-<section>
-    <form>
-        <button  type="button" onclick="window.location.href='#search'">Back to search of page </button>
-    </form>
-    <br><br>
-</section>
+
+<!-- here -->
+
+
 <section style="background-color: darkgray; color:aliceblue">
     <hr>
        <h1> Implementing the Functionalities </h1>
@@ -157,6 +126,12 @@
             {% endfor %}
         </ul>
 
+</section>
+<section>
+    <form>
+        <button  type="button" onclick="window.location.href='#search'">Back to search of page </button>
+    </form>
+    <br><br>
 </section>
 {% endblock content %}
 

@@ -12,5 +12,7 @@ urlpatterns = [
     path('Skills.html', views.Skills, name='Skills'),
     path('PhoneApplication.html', views.PhoneApplications, name='Phone-applications'),
     path('Other.html', views.Other, name='Other'),
+    path('History.html', views.history_view, name='history_view'),
+    path('history/<int:pk>/delete/', views.delete_history, name='delete_history'),
    
 ]
