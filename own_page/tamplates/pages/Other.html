@@ -19,11 +19,11 @@
     <div class="container">
         <h1 id="search">farah search</h1>
         <form id="searchForm" action="" method="POST" target="_blank">
-          {% csrf_token %}
-            <input id="textInput" name="q" list="list" placeholder="Enter your search query...">
+            {% csrf_token %}
+            {{ form.q }}
             <button class="T" type="button" id="speechButton">Speak</button>
             <br>
-            <button class="S" type="submit">Search </button>
+            <button class="S" type="submit">Search</button>
             <br>
             <!-- Search recommendations list -->
             <datalist id="list">
@@ -31,7 +31,6 @@
                     <option value="{{ item.Search }}">
                 {% endfor %}
             </datalist>
-            
         </form>
     </div>
 
